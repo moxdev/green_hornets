@@ -2,32 +2,33 @@
 
 class Controller
 
-  self.run
+  def self.run
     system('clear')
-    View.welcome_and_initial_input
+    View.welcome_message
     Model.generate_deck
     until @input == "exit"
       system('clear')
       @current_card = Model.pick_a_card
-      View.display_description(@current_card)
-      @input = View.get_game_input
+      View.display_definition_to_user(@current_card)
+      @input = View.get_user_input
       check_answer(@input)
-      break if Model.deck_empty?
+      break if Model.check_if_deck_empty?
     end
     system('clear')
-    View.display_bye_msg
+    View.display_exit_message
   end
 
-  self.check_answer(input)
+  def self.check_answer(input)
     if input == "exit"
       return
     elsif input == @current_card.answer
-      View.display_congrats
+      View.congratulations_message
       gets.chomp
     else
-      View.display_try_again
-      @input = View.get_game_input
+      View.try_again_message
+      @input = View.get_user_input
       check_answer(@input)
+    end
   end
 
 end
