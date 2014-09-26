@@ -4,8 +4,9 @@ class View
   attr_accessor :user_input
 
   def self.welcome_message
-    puts "Welcome to Flash Cards with your Superego!"
-    puts "__________________________________"
+    puts "========================================================================="
+    puts "Welcome to Flash Cards with your Superego!".center(50)
+    puts "========================================================================="
     puts "Here are the instructions:"
     puts "To play, hit enter to start and just enter the correct term for each definition"
     puts "Type 'exit' to quit the program."
