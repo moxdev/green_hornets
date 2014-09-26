@@ -5,11 +5,11 @@ class View
   def self.welcome_message
     puts "Welcome to the OG Ruby Flash Cards for Dummies!"
     puts "__________________________________"
-
-    `say "Welcome to the OG Ruby Flash Cards for Dummies!"`
+    puts "Here are the instructions:"
     puts "To play, hit enter to start and just enter the correct term for each definition"
     puts "Type 'exit' to quit the program."
     puts "Yo. Yo. You ready?"
+    `say "Welcome to the OG Ruby Flash Cards for Dummies!"`
     `say "Yo. Yo. You ready?"`
 
     @user_input = gets.chomp
@@ -31,12 +31,12 @@ class View
   end
 
   def self.congratulations_message
-    puts "Great job! Ready for next question?"
+    puts "Great job! Ready for next question? Hit enter."
   end
 
   def self.try_again_message
-    puts "Common, focus my son.  You can do better.  Superego is talking to you."
-    `say "Common, focus my son.  You can do better.  Superego is talking to you."`
+    puts "Common, focus my son.  You can do better.  Superego is talking to you. Guess again."
+    `say "Common, focus my son.  You can do better.  Superego is talking to you. Guess again."`
   end
 
 
