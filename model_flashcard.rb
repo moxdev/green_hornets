@@ -1,7 +1,7 @@
 # create card class
 # generate deack from text file
 # pick a question
-# check if deck empty
+# check if deck empty.
 
 
 class Card
